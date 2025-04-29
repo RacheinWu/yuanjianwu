@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="illusions/maomaotou.png">
+    <title>Yuanjian Wu | Academic Homepage</title>
+    <style>
+        /* Base Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            /*background-color: #f5f5e0;*/
+            background-color: #fffff5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #004d40;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main layout */
+        .main-part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px 40px 40px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .header .left-box {
+            flex: 1;
+            max-width: 650px;
+        }
+
+        .header .right-box {
+            width: 180px;
+            height: 180px;
+            margin-left: 40px;
+        }
+
+        .header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /*border-radius: 8px;*/
+            /*border: 2px solid #004d40;*/
+        }
+
+        .name {
+            display: flex;
+            align-items: baseline;
+            font-size: 33px;
+            color: #004d40;
+        }
+
+        .name .zhongwen {
+            margin-left: 20px;
+            font-size: 24px;
+            color: #004d40;
+        }
+
+        .description {
+            margin-top: 16px;
+        }
+
+        .description p {
+            margin-top: 12px;
+        }
+
+        .highlight {
+            color: #004d40;
+            font-weight: bold;
+        }
+
+        .note {
+            margin-top: 16px;
+            color: red;
+        }
+
+        /* Section titles */
+        section {
+            /*width: 100%;*/
+            /*max-width: 1000px;*/
+            margin-bottom: 60px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            color: #004d40;
+            border-bottom: 2px solid #004d40;
+            display: inline-block;
+            margin-bottom: 24px;
+            padding-bottom: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .publication {
+            text-align: center;
+        }
+
+        .publication h3 {
+            margin-top: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="main-part">
+    <!-- Header: Name, Info, Photo -->
+    <div class="header">
+        <div class="left-box">
+            <div class="name">
+                <div class="yingwen">Yuanjian Wu</div>
+                <div class="zhongwen">吴远健</div>
+            </div>
+            <div class="description">
+                <p>Hi, I am Yuanjian. I am currently a Master Student at Sun Yat-sen University (SYSU).</p>
+                <p>My research interests include <span class="highlight">computer vision</span> and <span
+                        class="highlight">MLLMs</span>, specifically AIGC for 2D/3D vision, Robotics, etc.</p>
+                <p><a href="#">⚡GitHub</a> / Email / <a href="#">Zhihu</a> / <a
+                        href="https://space.bilibili.com/12750464" target="_blank">Bilibili</a> / <a href="#">Google
+                    Scholar</a></p>
+                <p class="note">★ Now, I am studying VLM & VLA ......</p>
+                <p class="note">★ 2025/4/29 🎉 Conducted research as a Visiting Student at the
+                    <a href="https://zhuanghp.github.io/">MIAA Lab</a>,
+                    South China University of Technology (SCUT).
+                    (≧∇≦)ﾉ</p>
+            </div>
+        </div>
+        <div class="right-box">
+            <img src="illusions/p.jpg" alt="Yuanjian Wu">
+        </div>
+    </div>
+
+
+    <div style="display: flex">
+        <div class="left-box-quwei">
+            <iframe src="typing-box.html" width="720" height="300" style="border:none;"></iframe>
+        </div>
+        <div class="right-box-quwei" style="height: 150px;width: 150px">
+            <img src="illusions/xiaohui.png" style="height: 100%;width: 100%">
+        </div>
+    </div>
+
+    <div style="color: #004d40">❀ ❀ ❀ ❀ ❀ ❀❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀❀ ❀
+        ❀ ❀ ❀ ❀ ❀ ❀ ❀
+    </div>
+
+    <!-- Recent Learning Section -->
+    <section id="learning">
+        <h2>Recent Research</h2>
+        <div>
+            <iframe src="kuang.html" width="1000px" height="442px" style="border:1px solid #e1e4e8;"></iframe>
+        </div>
+    </section>
+
+    <!--    bottom-banner-->
+    <div style="color: #004d40;margin-bottom: 20px">❀ ❀❀ ❀ ❀ ❀ ❀ ❀ ❀❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀
+        ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀
+        ❀❀ ❀
+        ❀ ❀ ❀ ❀ ❀ ❀ ❀
+    </div>
+
+    <section id="honor">
+        <h2>Honor</h2>
+        <div style="display: flex;width: 1000px;    flex-direction: column;">
+            <url>
+
+                <li>China Collegiate Algorithm Design & Programming Challenge Contest <span
+                        style="color: goldenrod; font-weight: bold">🥈National Silver Award</span></li>
+                <li>The 9" China International College Students’ "internet +’ Innovation and Entrepreneurship
+                    Competition <span style="color: lightslategray; font-weight: bold">🥉 Province Bronze Award</span>
+                </li>
+                <li>Awarded Top <span style="color: rgba(179,5,5,0.87); font-weight: bold">3 (3/150) </span>in Graduation Thesis within the Computer Science Department.</li>
+                <li><span style="color: rgba(179,5,5,0.87); font-weight: bold">Honor Member</span> of ITA3M Lab from 1st to 3rd year of Master’s program.</li>
+                <li>Completion of a key national software project titled 'Blue Grain Warehouse'.</li>
+            </url>
+
+        </div>
+
+    </section>
+
+
+    <div style="display: flex; padding-top: 10px;width: 1000px;justify-content: space-between;border-top: 1px solid rgb(0,88,38)">
+        <div style="display: flex;">
+            <div style="display: flex;flex-direction: column;justify-content: space-evenly;">
+                <div>Template author: Rachein Wu from SYSU（吴远健 in 中山大学）</div>
+                <div>Host: Rachein Wu from SYSU（吴远健 in 中山大学）</div>
+            </div>
+            <div><img src="illusions/xiaoxun.png" style="height: 90px;"></div>
+        </div>
+        <div>
+            <img src="illusions/tree.png" style="width: 80px;height: 80px">
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

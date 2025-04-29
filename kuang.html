@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Yuanjian Wu</title>
+    <style>
+        :root {
+            --sysu-green: rgb(0, 88, 38);
+            --text-dark: #24292e;
+            --text-light: #555;
+            --border: #e1e4e8;
+            --bg: #ffffff;
+            --shadow: rgba(0, 88, 38, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-dark);
+            /*padding: 40px;*/
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg);
+            border-radius: 8px;
+            overflow: hidden;
+            height: 440px;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .preview {
+            flex: 1 1 40%;
+            position: relative;
+            padding: 20px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* 让 meta 区始终在底部 */
+            background: var(--bg);
+        }
+
+        .preview img {
+            /* 限制最大尺寸，但不拉伸父容器 */
+            width: 75%; /* 最大宽度为父容器宽度的 80% */
+            /*height: 75%; !* 最大高度为父容器高度的 80% *!*/
+            /*width: auto; !* 保持图片原始宽高比 *!*/
+            height: auto;
+            /*border-radius: 4px;*/
+            object-fit: contain; /* 等比例缩放并完整显示 */
+            margin: 0 auto 16px; /* 居中显示，下方保留 16px 间距 */
+            box-shadow: 0 2px 8px var(--shadow);
+        }
+
+
+        .preview .meta {
+            line-height: 1.4;
+        }
+
+        .preview .meta .venue {
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .preview .meta .title {
+            font-size: 1.2em;
+            color: var(--sysu-green);
+            margin-bottom: 4px;
+        }
+
+        .list {
+            flex: 1 1 40%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg);
+        }
+
+        .list-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            transition: background .2s;
+        }
+
+        .list-item:hover {
+            background: #f6f8fa;
+        }
+
+        .list-item .small-venue {
+            font-size: 0.85em;
+            color: var(--text-light);
+        }
+
+        .list-item .small-title {
+            font-size: 1em;
+            color: var(--sysu-green);
+            margin: 4px 0;
+        }
+
+        .list-item .btn {
+            float: right;
+            background: var(--sysu-green);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            text-decoration: none;
+        }
+
+        .more-btn {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .more-btn a {
+            display: inline-block;
+            background: var(--sysu-green);
+            color: #fff;
+            padding: 8px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            transition: background .2s;
+        }
+
+        .more-btn a:hover {
+            background: #003d29;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 左侧展示区 -->
+    <div class="preview" id="preview">
+        <img src="" alt="Preview" id="preview-img">
+        <div class="meta">
+            <div class="venue" id="preview-venue"></div>
+            <div class="title" id="preview-title"></div>
+        </div>
+    </div>
+
+    <!-- 右侧列表区 -->
+    <div class="list" id="list">
+        <div class="more-btn">
+            <a href="#">更多</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 本地图片示例：确保 images/ 目录下有对应文件
+    const publications = [
+        {
+            title: "MC-FAE: A Multi-Conditional MLLMs-Driven Realistic Facial Aging Editor",
+            venue: "From：arXiv",
+            img: "paper-illusions/paper-2.jpg",
+            link: "#"
+        },
+        {
+            title: "From Image to Temporal Data: A Review of Cross-Modal" +
+                "Augmentation Techniques with Domain-Specific Applications",
+            venue: "From：arXiv",
+            img: "paper-illusions/paper-1.png",
+            link: "#"
+        },
+        {
+            title: "VLA & VLM",
+            venue: "From：arXiv",
+            img: "illusions/maomaotou.png",
+            link: "#"
+        },
+        // 后续新增只要在这里加
+    ];
+
+    function renderList() {
+        const listEl = document.getElementById("list");
+        const moreBtn = listEl.querySelector(".more-btn");
+        listEl.innerHTML = "";
+        publications.forEach((pub, i) => {
+            const item = document.createElement("div");
+            item.className = "list-item";
+            item.innerHTML = `
+        <div class="small-venue">${pub.venue}</div>
+        <div class="small-title">${pub.title}</div>
+        <a class="btn" href="${pub.link}">详情</a>
+      `;
+            item.addEventListener("mouseenter", () => updatePreview(i));
+            listEl.appendChild(item);
+        });
+        listEl.appendChild(moreBtn);
+    }
+
+    function updatePreview(idx) {
+        const pub = publications[idx];
+        document.getElementById("preview-img").src = pub.img;
+        document.getElementById("preview-venue").textContent = pub.venue;
+        document.getElementById("preview-title").textContent = pub.title;
+    }
+
+    renderList();
+    updatePreview(0);
+</script>
+
+</body>
+</html>
