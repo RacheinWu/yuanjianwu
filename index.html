@@ -147,12 +147,12 @@
             </div>
             <div class="description">
                 <p>Hi, I am Yuanjian. I am currently a Master Student at Sun Yat-sen University (SYSU).</p>
-                <p>My research interests include <span class="highlight">computer vision</span> and <span
+                <p>My research interests include <span class="highlight">Computer Vision</span> and <span
                         class="highlight">MLLMs</span>, specifically AIGC for 2D/3D vision, Robotics, etc.</p>
-                <p><a href="#">⚡GitHub</a> / Email / <a href="#">Zhihu</a> / <a
-                        href="https://space.bilibili.com/12750464" target="_blank">Bilibili</a> / <a href="#">Google
+                <p><a href="#">⚡GitHub</a> / Email / Zhihu / <a
+                        href="https://space.bilibili.com/12750464" target="_blank">⚡Bilibili</a> / <a href="#">Google
                     Scholar</a></p>
-                <p class="note">★ Now, I am studying VLM & VLA ......</p>
+                <p class="note">★ 2025/4/6 Now, I am studying VLM & VLA ......</p>
                 <p class="note">★ 2025/4/29 🎉 Conducted research as a Visiting Student at the
                     <a href="https://zhuanghp.github.io/">MIAA Lab</a>,
                     South China University of Technology (SCUT).
@@ -182,6 +182,58 @@
     <div style="color: #004d40">❀ ❀ ❀ ❀ ❀ ❀❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀ ❀❀ ❀
         ❀ ❀ ❀ ❀ ❀ ❀ ❀
     </div>
+
+    <section>
+        <h2>Recent Learning & Note</h2>
+        <div style="margin: 0 0 15px 0">
+            <!--            <iframe src="recent_learning.html" width="990px" height=""></iframe>-->
+
+            <div style="width: 990px;background-color: #ffffff;border: 1px solid #e1e4e8; padding: 10px 20px 10px 20px ">
+                <div>
+                    <h3><span>#1</span>
+                        <span style="color: rgb(1,120,55)">Why can LLMs inherently achieve few-shot learning?</span>
+<!--                        <span style="color: rgb(236,101,0)">[Notion] [Zhihu] [Bilibili]</span>-->
+                        <span style="color: rgb(236,101,0)">[Notion]</span>
+                    </h3>
+                </div>
+                <div>
+                   LLMs are built on the transformer architecture, which enables them to grasp the requirements of specific tasks and generate appropriate responses under prompts, such as in few-shot learning. This is remarkable because, with just a few examples, the network can comprehend, analyze, and address a wide range of new problems. For example, given a set of questions with various textual combinations and their corresponding answers, the model can understand the task and generate responses to new questions within that task. But why does this happen? The primary reason lies in the unique design of transformers, which brings about these positive effects. In this note, we will explore this from four key aspects of transformers: 1. Approximate meta-learning design (function selection strategy) 2. Attention-forward strategy without parameter updates 3. First-order gradient descent 4. Massive dataset stacking training with high resource demands. By examining these four perspectives, we can understand why LLMs can achieve task understanding in few-shot settings.
+                </div>
+                <div>
+                    <h4>Subject: <span style="color: rgb(236,101,0)">LLMs</span>, <span style="color: rgb(236,101,0)">Few-shot Learning</span>
+                    </h4>
+                </div>
+                <div>
+                    <h4>Updated-time: <span style="font-weight: normal">2025-05-06</span></h4>
+                </div>
+            </div>
+        </div>
+
+
+        <div style="margin: 15px 0 15px 0">
+            <!--            <iframe src="recent_learning.html" width="990px" height=""></iframe>-->
+
+            <div style="width: 990px;background-color: #ffffff;border: 1px solid #e1e4e8; padding: 10px 20px 10px 20px ">
+                <div>
+                    <h3><span>#2</span>
+                        <span style="color: rgb(1,120,55)">Understanding and Development of Continual Learning in LLMs</span>
+<!--                        <span style="color: rgb(236,101,0)">[Notion] [Zhihu] [Bilibili]</span>-->
+                        <span style="color: rgb(236,101,0)">[Notion] </span>
+                    </h3>
+                </div>
+                <div>
+LLMs rely heavily on large-scale training datasets and immense GPU computing power, making the training process highly expensive. In traditional model fine-tuning, retraining is often necessary, which can hinder further progress due to the high costs involved. Moreover, even after pre-training, models require fine-tuning to adapt to new tasks. However, fine-tuning does not always lead to effective adaptation; instead, it can cause 'memory forgetting' of previous tasks. Specifically, as new tasks are learned, adjustments made to the network parameters based on the new training data, without the positive constraints from the old training data, can result in a decline in performance on the old tasks. In recent years, continual learning has emerged as a key solution to this challenge. In this note, I will explore the integration of continual learning with VLMs, highlighting cutting-edge research on continual learning for multimodal large models (VLMs) from the perspective of continual learning.                </div>
+                <div>
+                    <h4>Subject: <span style="color: rgb(236,101,0)">LLMs</span>, <span style="color: rgb(236,101,0)">Continual Learning</span>
+                    </h4>
+                </div>
+                <div>
+                    <h4>Updated-time: <span style="font-weight: normal">2025-05-06</span></h4>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
     <!-- Recent Learning Section -->
     <section id="learning">
